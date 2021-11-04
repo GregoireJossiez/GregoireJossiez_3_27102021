@@ -1,0 +1,155 @@
+header {
+  padding: 20px 0px 20px 0px;
+  img {
+    width: 170px;
+    display: block;
+    margin: auto;
+  }
+}
+
+#location {
+  background-color: rgb(234, 234, 234);
+  -webkit-box-shadow: inset 0 20px 20px -35px rgba(0,0,0,0.8);
+  -moz-box-shadow: inset 0 20px 20px -35px rgba(0,0,0,0.8);
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    i {
+      margin-right: 20px;
+    }
+    p {
+      font-family: Roboto, cursive;
+    }
+  }
+}
+
+#booking {
+  background-color: rgb(246, 246, 246);
+  font-family: Roboto, cursive;
+  padding: 50px 0px 50px 0px;
+  text-align: center;
+  h1 {
+    margin: 0px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 25px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 18px;
+  }
+  button {
+    display: block;
+    background: linear-gradient(175deg, #FF79DA, #9356DC);
+    border: 0px;
+    height: 50px;
+    border-radius: 25px;
+    color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+    box-shadow: 0px 5px 5px lightgrey;
+  }
+}
+
+#function {
+  font-family: Roboto, cursive;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 5% 20px 5%;
+  figure {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px lightgrey;
+    &:hover {
+      background-color: rgb(245, 237, 254);
+      i {
+        color: #9356DC;
+      }
+    }
+  }
+  div {
+    margin-left: -12px;
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    background-color: #9356DC;
+  }
+  i {
+    width: 20px;
+  }
+  figcaption {
+    margin-left: 25px;
+  }
+}
+
+#restaurants {
+  background-color: rgb(246, 246, 246);
+  font-family: Roboto, cursive;
+  margin-top: 40px;
+  padding: 40px 5% 0px 5%;
+  .restaurants-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+  }
+  .restaurant-card {
+    width: 337px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px lightgrey;
+    &-img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    img {
+      width: 337px;
+      height: 175px;
+      object-fit: cover;
+    }
+    div {
+      width: 80px;
+      height: 30px;
+      background-color: #99E2D0;
+      color: rgb(27, 147, 117);
+      border-radius: 2px;
+      position: absolute;
+      margin: -170px 0px 0px 247px;
+      text-align: center;
+      padding-top: 6px;
+    }
+    figcaption {
+      padding: 0px 10px 0px 10px;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      p {
+        margin-top: 0px;
+        font-weight: 300;
+      }
+      i {
+        position: absolute;
+        margin: 15px 0px 0px 280px;
+        font-size: 25px;
+        &:hover {
+          color: purple;
+        }
+      }
+    }
+  }
+}
