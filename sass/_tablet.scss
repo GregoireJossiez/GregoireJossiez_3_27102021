@@ -1,11 +1,6 @@
-@import "./Utils/variables";
-@import "./Utils/mixins";
-@import "./Base/base";
-@import "./Composants/composants";
-
+@media (max-width: 1050px) {
 
 #location {
-  width: 100%;
   background-color: $dark-grey;
   -webkit-box-shadow: inset 0 20px 20px -35px rgba(0,0,0,0.8);
   -moz-box-shadow: inset 0 20px 20px -35px rgba(0,0,0,0.8);
@@ -41,51 +36,45 @@
 
 .function {
   font-family: Roboto, cursive;
-  padding: 20px 5% 20px 5%;
-  .tiles {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
-  position: relative;
-    div {
-      position: absolute;
-      left: -14px;
-      width: 25px;
-      height: 25px;
-      border-radius: 25px;
-      text-align: center;
-      padding-top: 5px;
-      color: white;
-      background-color: $primary;
-    }
-    i {
-      position: absolute;
-      left: 20px;
-      width: 20px;
-    }
-    figcaption {
-      align-self: center;
-    }
+  padding: 20px 5% 20px 5%;
+  div {
+    position: absolute;
+    left: -14px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    background-color: $primary;
+  }
+  i {
+    position: absolute;
+    left: 30px;
+    width: 20px;
+  }
+  figcaption {
+    width: 200px;
+    align-self: center;
   }
 }
 
-#restaurants {
-  background-color: $light-grey;
-}
-
 .restaurants {
+  background-color: $light-grey;
   font-family: Roboto, cursive;
   margin-top: 40px;
   padding: 40px 5% 60px 5%;
   .restaurants-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     grid-gap: 20px;
   }
   .restaurant-card {
-    width: 23%;
+    width: 100%;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 5px 5px lightgrey;
@@ -128,7 +117,6 @@
         top: 12px;
         right: 20px;
         font-size: 25px;
-        z-index: 2;
         &:hover {
           color: purple;
         }
@@ -143,7 +131,6 @@ main {
 
 .banner-img {
   width: 100%;
-  display: block;
 }
 
 .menu {
@@ -160,18 +147,12 @@ main {
     display: flex;
     justify-content: space-around;
     font-family: Shrikhand, cursive;
-    position: relative;
     h1 {
       font-size: 28px;
-      position: absolute;
-      top: 20px;
       left: 20px;
     }
     i {
       font-size: 28px;
-      position: absolute;
-      top: 40px;
-      right: 30px;
       align-self: center;
     }
   }
@@ -196,5 +177,4 @@ main {
   }
 }
 
-@import "tablet";
-@import "mobile";
+}
