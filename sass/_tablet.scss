@@ -1,14 +1,7 @@
-header {
-  padding: 20px 0px 20px 0px;
-  img {
-    width: 170px;
-    display: block;
-    margin: auto;
-  }
-}
+@media (max-width: 1050px) {
 
 #location {
-  background-color: rgb(234, 234, 234);
+  background-color: $dark-grey;
   -webkit-box-shadow: inset 0 20px 20px -35px rgba(0,0,0,0.8);
   -moz-box-shadow: inset 0 20px 20px -35px rgba(0,0,0,0.8);
   figure {
@@ -25,7 +18,7 @@ header {
 }
 
 #booking {
-  background-color: rgb(246, 246, 246);
+  background-color: $light-grey;
   font-family: Roboto, cursive;
   padding: 50px 0px 50px 0px;
   text-align: center;
@@ -39,70 +32,45 @@ header {
     font-weight: 300;
     font-size: 18px;
   }
-  button {
-    display: block;
-    background: linear-gradient(175deg, #FF79DA, #9356DC);
-    border: 0px;
-    height: 50px;
-    border-radius: 25px;
-    color: white;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin: auto;
-    box-shadow: 0px 5px 5px lightgrey;
-  }
 }
 
-#function {
+.function {
   font-family: Roboto, cursive;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px 5% 20px 5%;
-  figure {
-    display: flex;
-    /*justify-content: center;*/
-    align-items: center;
-    width: 100%;
-    height: 70px;
-    background-color: rgb(246, 246, 246);
-    border-radius: 20px;
-    box-shadow: 0px 5px 5px lightgrey;
-    &:hover {
-      background-color: rgb(245, 237, 254);
-      i {
-        color: #9356DC;
-      }
-    }
-  }
   div {
-    margin-left: -12px;
-    margin-right: 25px;
+    position: absolute;
+    left: -14px;
     width: 25px;
     height: 25px;
     border-radius: 25px;
     text-align: center;
     padding-top: 5px;
     color: white;
-    background-color: #9356DC;
+    background-color: $primary;
   }
   i {
+    position: absolute;
+    left: 30px;
     width: 20px;
   }
   figcaption {
-    margin-left: 25px;
+    width: 200px;
+    align-self: center;
   }
 }
 
-#restaurants {
-  background-color: rgb(246, 246, 246);
+.restaurants {
+  background-color: $light-grey;
   font-family: Roboto, cursive;
   margin-top: 40px;
-  padding: 40px 5% 0px 5%;
+  padding: 40px 5% 60px 5%;
   .restaurants-cards {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
     grid-gap: 20px;
   }
   .restaurant-card {
@@ -122,18 +90,20 @@ header {
     div {
       width: 80px;
       height: 30px;
-      background-color: #99E2D0;
-      color: rgb(27, 147, 117);
+      background-color: $tertiary;
+      color: $tertiary-dark;
       border-radius: 2px;
       position: absolute;
-      margin: -170px 0px 0px 247px;
-      text-align: center;
+      top: 10px;
+      right: 10px;
       padding-top: 6px;
+      text-align: center;
     }
     figcaption {
       padding: 0px 10px 0px 10px;
       display: flex;
       flex-direction: column;
+      position: relative;
       h3 {
         margin-top: 10px;
         margin-bottom: 5px;
@@ -144,7 +114,8 @@ header {
       }
       i {
         position: absolute;
-        margin: 15px 0px 0px 280px;
+        top: 12px;
+        right: 20px;
         font-size: 25px;
         &:hover {
           color: purple;
@@ -154,29 +125,56 @@ header {
   }
 }
 
-footer {
-  margin-top: 60px;
-  padding: 20px 0px 30px 20px;
-  background-color: rgb(53, 53, 53);
-  color: white;
-  h3 {
+main {
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+}
+
+.menu {
+  background-color: $light-grey;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  font-family: Roboto, cursive;
+  width: 100%;
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+  padding-bottom: 60px;
+  &__header {
+    display: flex;
+    justify-content: space-around;
     font-family: Shrikhand, cursive;
-    font-size: 17px;
-  }
-  ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-  }
-  li {
-    font-family: Roboto, cursive;
-    margin-bottom: 10px;
+    h1 {
+      font-size: 28px;
+      left: 20px;
+    }
     i {
-      width: 25px;
-      font-size: 15px;
-    }
-    .fa-hands-helping {
-      font-size: 11px;
+      font-size: 28px;
+      align-self: center;
     }
   }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+    padding: 60px 10px 0px 10px;
+    margin-bottom: 35px;
+    h2 {
+      font-size: 19px;
+      font-weight: 300;
+      margin-top: 0px;
+      margin-bottom: -15px;
+    }
+    .underline {
+      width: 50px;
+      height: 4px;
+      background-color: $tertiary;
+      margin-top: 0px;
+    }
+  }
+}
+
 }

@@ -1,0 +1,115 @@
+.btn {
+  display: block;
+  background: linear-gradient(175deg, $secondary, $primary);
+  border: 0px;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: auto;
+  box-shadow: 0px 5px 5px lightgrey;
+  &:hover {
+    background: linear-gradient(175deg, darken($secondary, 5%), $primary);
+    box-shadow: 0px 1px 5px grey;
+  }
+  &--menu {
+    margin-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.tile {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(246, 246, 246);
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px lightgrey;
+  &:hover {
+    background-color: $primary-light;
+    i {
+      color: $primary;
+    }
+  }
+  &__caption {
+    padding: 0px 10px 0px 10px;
+  }
+  &--white {
+    display: block;
+    background-color: white;
+    padding-top: 10px;
+    position: relative;
+    box-shadow: 0px 0px 10px lightgrey;
+    &:hover {
+      width: 100%;
+      padding-right: 70px;
+      background-color: white;
+      .menu__info {
+        width: 100%;
+      }
+      .select {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        top: 0;
+        right: 0px;
+        .fa-check-circle {
+          color: white;
+          font-size: 22px;
+          margin-top: 25px;
+          margin-left: 20px;
+        }
+      }
+    }
+    h3 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-weight: 500;
+      width: 86%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      margin-top: 0px;
+      font-weight: 300;
+    }
+    .menu__info {
+      width: 100%;
+      display: flex;
+      position: relative;
+      p:first-child {
+        width: 86%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    strong {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+    .select {
+      display: none;
+      width: 60px;
+      height: 100%;
+      background-color: $tertiary;
+    }
+  }
+}
+
+.tile-function {
+  justify-content: center;
+  position: relative;
+  width: 435px;
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
+}
