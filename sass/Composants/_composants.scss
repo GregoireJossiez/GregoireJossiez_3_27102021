@@ -10,7 +10,8 @@
   margin: auto;
   box-shadow: 0px 5px 5px lightgrey;
   &:hover {
-    background: linear-gradient(175deg, darken($secondary, 5%), $primary);
+    // background: linear-gradient(175deg, darken($secondary, 5%), $primary);
+    background: linear-gradient(175deg, $primary, $secondary);
     box-shadow: 0px 1px 5px grey;
   }
   &--menu {
@@ -40,6 +41,7 @@
   }
   &--white {
     display: block;
+    width: 100%;
     background-color: white;
     padding-top: 10px;
     position: relative;
