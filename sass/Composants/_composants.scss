@@ -9,9 +9,11 @@
   padding-left: 20px;
   margin: auto;
   box-shadow: 0px 5px 5px lightgrey;
+  transition: box-shadow 300ms, background-size 300ms;
   &:hover {
     // background: linear-gradient(175deg, darken($secondary, 5%), $primary);
-    background: linear-gradient(175deg, $primary, $secondary);
+    // background: linear-gradient(175deg, $primary, $secondary);
+    background-size: 200% 100%;
     box-shadow: 0px 1px 5px grey;
   }
   &--menu {
@@ -30,6 +32,7 @@
   background-color: rgb(246, 246, 246);
   border-radius: 20px;
   box-shadow: 0px 5px 5px lightgrey;
+  transition: background-color 300ms;
   &:hover {
     background-color: $primary-light;
     i {
@@ -46,6 +49,25 @@
     padding-top: 10px;
     position: relative;
     box-shadow: 0px 0px 10px lightgrey;
+    transition: padding-right 300ms;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: translate 3s;
+    &:nth-child(3) {animation-delay: 0.0s;}
+    &:nth-child(4) {animation-delay: 0.1s;}
+    &:nth-child(5) {animation-delay: 0.2s;}
+    &:nth-child(6) {animation-delay: 0.3s;}
+    @keyframes translate {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
     &:hover {
       width: 100%;
       padding-right: 70px;
@@ -56,7 +78,7 @@
       .select {
         display: block;
         position: absolute;
-        z-index: 1;
+        width: 60px;
         border-top-right-radius: 18px;
         border-bottom-right-radius: 18px;
         top: 0;
@@ -66,6 +88,7 @@
           font-size: 22px;
           margin-top: 25px;
           margin-left: 20px;
+          transform: rotate(360deg);
         }
       }
     }
@@ -99,10 +122,24 @@
       right: 0px;
     }
     .select {
-      display: none;
-      width: 60px;
+      // display: none;
+      width: 0px;
+      position: absolute;
       height: 100%;
       background-color: $tertiary;
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 18px;
+      top: 0;
+      right: 0px;
+      transition: width 300ms;
+      .fa-check-circle {
+        color: white;
+        font-size: 22px;
+        margin-top: 25px;
+        margin-left: 20px;
+        transform: rotate(0deg);
+        transition: transform 500ms;
+      }
     }
   }
 }
