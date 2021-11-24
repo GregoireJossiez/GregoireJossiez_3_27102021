@@ -1,28 +1,3 @@
-.btn {
-  display: block;
-  background: linear-gradient(175deg, $secondary, $primary);
-  border: 0px;
-  height: 50px;
-  border-radius: 25px;
-  color: white;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin: auto;
-  box-shadow: 0px 5px 5px lightgrey;
-  transition: box-shadow 300ms, background-size 300ms;
-  &:hover {
-    // background: linear-gradient(175deg, darken($secondary, 5%), $primary);
-    // background: linear-gradient(175deg, $primary, $secondary);
-    background-size: 200% 100%;
-    box-shadow: 0px 1px 5px grey;
-  }
-  &--menu {
-    margin-top: 40px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
 .tile {
   display: flex;
   /*justify-content: center;*/

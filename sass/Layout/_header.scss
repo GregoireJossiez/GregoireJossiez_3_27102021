@@ -1,0 +1,15 @@
+header {
+  padding: 20px 0px 20px 0px;
+  position: relative;
+  img {
+    width: 170px;
+    display: block;
+    margin: auto;
+  }
+  .fa-arrow-left {
+    position: absolute;
+    font-size: 20px;
+    top: 25px;
+    left: 20px;
+  }
+}
