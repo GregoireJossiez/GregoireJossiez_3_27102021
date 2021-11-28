@@ -28,6 +28,7 @@
     justify-content: space-around;
     font-family: Shrikhand, cursive;
     position: relative;
+    @include heart-animation-res;
     h1 {
       font-size: 28px;
       position: absolute;
